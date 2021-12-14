@@ -15,5 +15,9 @@ namespace RegexPattern
         {
             return Regex.IsMatch(Name, Regex_Name);
         }
+        public bool validateLastName(string Name)
+        {
+            return Regex.IsMatch(Name, Regex_Name);
+        }
     }
 }

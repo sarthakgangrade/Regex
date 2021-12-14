@@ -11,7 +11,9 @@ namespace RegexPattern
         static void Main(string[] args)
         {
             Patterns patterns = new Patterns();
-            Console.WriteLine(patterns.validateName("Mar"));
+            Console.WriteLine("Name: " + patterns.validateName("Mar"));
+            Console.WriteLine("LastName: " + patterns.validateLastName("Roy"));
+            
             Console.ReadLine();
         }
     }
