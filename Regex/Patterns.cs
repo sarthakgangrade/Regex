@@ -9,7 +9,7 @@ namespace RegexPattern
 {
     class Patterns
     {
-        public static string Regex_Name = "^[A-Z]@[A-Z a-z]{2,}$";
+        public static string Regex_Name = "^[A-Z]{1}[A-Z a-z]{2,}$";
 
         public bool validateName(string Name)
         {
