@@ -13,7 +13,10 @@ namespace RegexPattern
         public static string Regex_MobileNumber = "^[1-9]{2}[ ]{1}[1-9]{1}[0-9]{9}$";
         public static string Regex_Email = "^([A-Za-z0-9]+[.#+_])*[A-Za-z0-9]+[@][A-Za-z]+[.][A-Za-z]{2,3}([.][A-Za-z]{2})?$";
         //rule 1 = min 8 charactors in password
-        public static string Regex_Password = "^[A-Za-z0-9]{8,}$";
+        // public static string Regex_Password = "^[A-Za-z0-9]{8,}$";
+
+        //rule 2 = min  1 uppercase
+        public static string Regex_Password = "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
         public bool validateName(string Name)
         {
             return Regex.IsMatch(Name, Regex_Name);
@@ -32,9 +35,9 @@ namespace RegexPattern
             return Regex.IsMatch(MobileNumber, Regex_MobileNumber);
         }
 
-        public bool validatePassword(string MobileNumber)
+        public bool validatePassword(string Password)
         {
-            return Regex.IsMatch(MobileNumber, Regex_Password);
+            return Regex.IsMatch(Password, Regex_Password);
         }
 
     }
