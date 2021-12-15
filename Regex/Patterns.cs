@@ -16,7 +16,9 @@ namespace RegexPattern
         // public static string Regex_Password = "^[A-Za-z0-9]{8,}$";
 
         //rule 2 = min  1 uppercase
-        public static string Regex_Password = "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+        //public static string Regex_Password = "^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+        //rule 3 = at least 1 numeric value
+        public static string Regex_Password = "^(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
         public bool validateName(string Name)
         {
             return Regex.IsMatch(Name, Regex_Name);
